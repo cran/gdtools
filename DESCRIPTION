@@ -1,5 +1,5 @@
 Package: gdtools
-Version: 0.0.3
+Version: 0.0.4
 License: GPL-3
 Title: Utilities for Graphical Rendering
 Description: Useful tools for writing vector graphics devices.
@@ -17,7 +17,7 @@ LinkingTo: Rcpp
 SystemRequirements: cairo
 BugReports: https://github.com/davidgohel/gdtools/issues
 NeedsCompilation: yes
-Packaged: 2015-10-21 22:29:18 UTC; davidgohel
+Packaged: 2015-10-28 13:03:12 UTC; davidgohel
 Author: David Gohel [aut, cre],
   Hadley Wickham [aut],
   Jeroen Ooms [ctb],
@@ -25,4 +25,4 @@ Author: David Gohel [aut, cre],
   RStudio [cph]
 Maintainer: David Gohel <david.gohel@ardata.fr>
 Repository: CRAN
-Date/Publication: 2015-10-22 08:24:25
+Date/Publication: 2015-10-28 18:39:11
