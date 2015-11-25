@@ -1,10 +1,10 @@
-025fe3c6049a805c7faf4c8fc7ad4936 *DESCRIPTION
+d8a75c0d70f60cd7662ba1a866ce95aa *DESCRIPTION
 7665f7a7df2eab602b13f80bd63fc967 *NAMESPACE
-713312cd83f1f7a687afd38c915811b4 *NEWS
+f3b7b0289e97c9d121b31ef24e8ff675 *NEWS
 8bb1a728b37fb2e6fa6439c83e6bbf9a *R/RcppExports.R
 fcaf67a08b2167d4a8abea1c8b9bf989 *R/gdtools.R
 3e7a8603f50e04732628ba1529f6061a *R/raster.R
-3c8c113594bb12ddb9cffacbf603e44d *configure
+fd08d252eed52fa9a23525dad2d3f6af *configure
 d41d8cd98f00b204e9800998ecf8427e *configure.win
 43588b352efa45bab950f5e80391d517 *inst/include/gdtools.h
 9b2d2d8dd0865f05447e8af4f70400c4 *inst/include/gdtools_RcppExports.h
