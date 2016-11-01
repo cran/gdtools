@@ -14,18 +14,23 @@ using namespace Rcpp;
 //' @param bold,italic Is text bold/italic?
 //' @param fontname Font name
 //' @param fontsize Font size
+//' @param fontfile Font file
 //' @examples
+//' \donttest{
+//' # The first run can be slow when font caches are missing
+//' # as font files are then being scanned to build those font caches.
 //' str_extents(letters)
 //' str_extents("Hello World!", bold = TRUE, italic = FALSE,
 //'   fontname = "sans", fontsize = 12)
+//' }
 //' @export
 // [[Rcpp::export]]
 NumericMatrix str_extents(CharacterVector x, std::string fontname = "sans",
                           double fontsize = 12, int bold = false,
-                          int italic = false) {
+                          int italic = false, std::string fontfile = "") {
   int n = x.size();
   CairoContext cc;
-  cc.setFont(fontname, fontsize, bold, italic);
+  cc.setFont(fontname, fontsize, bold, italic, fontfile);
   NumericMatrix out(n, 2);
 
   for (int i = 0; i < n; ++i) {
@@ -49,15 +54,19 @@ NumericMatrix str_extents(CharacterVector x, std::string fontname = "sans",
 //' @return A named numeric vector
 //' @inheritParams str_extents
 //' @examples
+//' \donttest{
+//' # The first run can be slow when font caches are missing
+//' # as font files are then being scanned to build those font caches.
 //' str_metrics("Hello World!")
+//' }
 //' @export
 // [[Rcpp::export]]
 NumericVector str_metrics(CharacterVector x, std::string fontname = "sans",
                           double fontsize = 12, int bold = false,
-                          int italic = false) {
+                          int italic = false, std::string fontfile = "") {
 
   CairoContext cc;
-  cc.setFont(fontname, fontsize, bold, italic);
+  cc.setFont(fontname, fontsize, bold, italic, fontfile);
 
   std::string str(Rf_translateCharUTF8(x[0]));
 
@@ -70,63 +79,4 @@ NumericVector str_metrics(CharacterVector x, std::string fontname = "sans",
   );
 }
 
-
-//' Check if font family exists.
-//'
-//' @return A logical value
-//' @param font_family font family name (case sensitive)
-//' @examples
-//' font_family_exists("sans")
-//' font_family_exists("Arial")
-//' font_family_exists("Courier")
-//' @export
-// [[Rcpp::export]]
-bool font_family_exists(std::string font_family = "sans" ) {
-
-  FcFontSet *font_set;
-  FcPattern *font_pattern;
-  FcResult font_result;
-  FcPattern *font_candidate;
-
-  if (!FcInit ()) {
-    warning ("Font config initialization failed");
-    return R_NilValue;
-  }
-
-  font_pattern = FcNameParse ((const FcChar8 *)font_family.c_str());
-
-  if (!font_pattern){
-    warning ("Unable to parse pattern string");
-    return R_NilValue;
-  }
-
-  FcConfigSubstitute (0, font_pattern, FcMatchPattern);
-  FcDefaultSubstitute (font_pattern);
-  font_set = FcFontSetCreate ();
-
-  font_candidate = FcFontMatch (0, font_pattern, &font_result);
-  if (font_candidate)
-    FcFontSetAdd (font_set, font_candidate);
-
-  FcPatternDestroy (font_pattern);
-
-  bool out = FALSE;
-  if (font_set) {
-    int	j;
-
-    for (j = 0; j < font_set->nfont; j++) {
-      FcChar8	*family;
-
-      if (FcPatternGetString (font_set->fonts[j], FC_FAMILY, 0, &family) != FcResultMatch)
-        family = (FcChar8 *) R_NilValue;
-      const char* charFamily = reinterpret_cast<char*>(family);
-      if( charFamily == font_family)
-        out = TRUE;
-      break;
-    }
-
-    FcFontSetDestroy (font_set);
-  }
-  return out;
-}
 

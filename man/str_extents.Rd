@@ -5,7 +5,7 @@
 \title{Compute string extents.}
 \usage{
 str_extents(x, fontname = "sans", fontsize = 12, bold = FALSE,
-  italic = FALSE)
+  italic = FALSE, fontfile = "")
 }
 \arguments{
 \item{x}{Character vector of of strings to measure}
@@ -15,14 +15,20 @@ str_extents(x, fontname = "sans", fontsize = 12, bold = FALSE,
 \item{fontsize}{Font size}
 
 \item{bold, italic}{Is text bold/italic?}
+
+\item{fontfile}{Font file}
 }
 \description{
 Determines the width and height of a bounding box that's big enough
 to (just) enclose the provided text.
 }
 \examples{
+\donttest{
+# The first run can be slow when font caches are missing
+# as font files are then being scanned to build those font caches.
 str_extents(letters)
 str_extents("Hello World!", bold = TRUE, italic = FALSE,
   fontname = "sans", fontsize = 12)
+}
 }
 
