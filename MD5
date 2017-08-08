@@ -1,7 +1,7 @@
-80ec682b49de1f06eff8c22e7263167e *DESCRIPTION
+a34ca17c81da4fbcc72625b18d82c96a *DESCRIPTION
 d32239bcb673463ab874e80d47fae504 *LICENSE
 4e25a342125c4b5004f2bea06a47b122 *NAMESPACE
-6969252c81f71d9a6e0cb625984f2357 *NEWS
+d8f3f4878793c555cd3cfc759f53c87c *NEWS
 8611754ae2c52280f37197ad2760daff *R/RcppExports.R
 50eeba8cef0787c4447ed21f574e319c *R/font_family_exists.R
 bddbedf0fbc4dfe3042e93ff71ccaf9f *R/fontconfig.R
@@ -9,7 +9,7 @@ dbc3bb0e317f3d76e7f49236a6c94164 *R/gdtools.R
 c60d489088286a6110e02114ccc4e255 *R/load.R
 3e7a8603f50e04732628ba1529f6061a *R/raster.R
 6071edd604dbeb75308cfbedc7790398 *cleanup
-7eac9993e8d4920d77a9b53d63580477 *configure
+76d82fa42797c71aaba2ca5da7dc8065 *configure
 d41d8cd98f00b204e9800998ecf8427e *configure.win
 de674c72d7d4669eaa6399ddddd882a6 *inst/fontconfig/dummy-fonts.conf
 aec4505d66f5583e59fcb80eb0fc20f8 *inst/fontconfig/fonts.conf
@@ -33,13 +33,13 @@ ffbfb5dc8cb2d1daa6e47e51f95f0b71 *man/version_cairo.Rd
 14928518f7a746f82a2937f9d2ebbd7e *src/font_metrics.cpp
 bc6a9479fe9002fc251f3bbca282c303 *src/gdtools.cpp
 d15f803daf529add0e3c695271bbede3 *src/raster_to_base64.cpp
-8bc6109474f5ead07a55a2b24b5ca0d1 *src/registerDynamicSymbol.c
+7b5aca0964894554a1f4de62b1c414e0 *src/registerDynamicSymbol.c
 748335ce069149ad0284380a5a571bc8 *src/sys_fonts.cpp
 5c9d701bd991873ff30ce3a613e630d2 *src/versions.cpp
 d8252437453801ecb341846f83005a7f *tests/testthat.R
 0d2ec137343a18760817a5ce152687e6 *tests/testthat/helper-fontconfig.R
 12da90c850e9c9c1cc27cd3afd338762 *tests/testthat/test-font_family_exists.R
 2f541f9d74d8ef19bcda19a7ab42729d *tests/testthat/test-raster.R
-1e3ed5b6295dc4e3b05156a946b5bba4 *tests/testthat/test-str_extents.R
+df90cd2644166b7e6efde5b4c377f5fc *tests/testthat/test-str_extents.R
 363712ab46912f592279feed64afc32e *tests/testthat/test-str_metrics.R
 5b31a6ec5afaebbc07710347052f3173 *tools/winlibs.R
