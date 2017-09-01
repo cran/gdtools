@@ -10,7 +10,7 @@ using namespace Rcpp;
 //' Determines the width and height of a bounding box that's big enough
 //' to (just) enclose the provided text.
 //'
-//' @param x Character vector of of strings to measure
+//' @param x Character vector of strings to measure
 //' @param bold,italic Is text bold/italic?
 //' @param fontname Font name
 //' @param fontsize Font size
@@ -78,5 +78,70 @@ NumericVector str_metrics(CharacterVector x, std::string fontname = "sans",
     _["descent"] = fm.descent
   );
 }
+
+// [[Rcpp::export]]
+NumericMatrix m_str_extents_(CharacterVector x,
+                            std::vector<std::string> fontname,
+                            std::vector<double> fontsize,
+                            std::vector<int> bold,
+                            std::vector<int> italic,
+                            std::vector<std::string> fontfile) {
+  int n = x.size();
+  CairoContext cc;
+  NumericMatrix out(n, 2);
+
+  for (int i = 0; i < n; ++i) {
+    cc.setFont(fontname[i], fontsize[i], bold[i], italic[i], fontfile[i]);
+    if (x[i] == NA_STRING) {
+      out(i, 0) = NA_REAL;
+      out(i, 1) = NA_REAL;
+    } else {
+      std::string str(Rf_translateCharUTF8(x[i]));
+      FontMetric fm = cc.getExtents(str);
+
+      out(i, 0) = fm.width;
+      out(i, 1) = fm.height;
+    }
+  }
+
+  return out;
+}
+
+//' Validate glyph entries
+//'
+//' Determines if strings contain glyphs not part of a font.
+//'
+//' @param x Character vector of strings
+//' @param bold,italic Is text bold/italic?
+//' @param fontname Font name
+//' @param fontfile Font file
+//' @return a logical vector, if a character element is containing at least
+//' a glyph that can not be matched in the font table, FALSE is returned.
+//'
+//' @examples
+//' glyphs_match(letters)
+//' glyphs_match("\u265E", bold = TRUE)
+//' @export
+// [[Rcpp::export]]
+LogicalVector glyphs_match(CharacterVector x, std::string fontname = "sans",
+                          int bold = false, int italic = false,
+                          std::string fontfile = "") {
+  int n = x.size();
+  CairoContext cc;
+  cc.setFont(fontname, 10.0, bold, italic, fontfile);
+  LogicalVector out(n);
+
+  for (int i = 0; i < n; ++i) {
+    if (x[i] == NA_STRING) {
+      out(i) = NA_LOGICAL;
+    } else {
+      std::string str(Rf_translateCharUTF8(x[i]));
+      out(i) = cc.validateGlyphs(str);
+    }
+  }
+
+  return out;
+}
+
 
 

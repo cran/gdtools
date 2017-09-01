@@ -6,7 +6,7 @@
 #' Determines the width and height of a bounding box that's big enough
 #' to (just) enclose the provided text.
 #'
-#' @param x Character vector of of strings to measure
+#' @param x Character vector of strings to measure
 #' @param bold,italic Is text bold/italic?
 #' @param fontname Font name
 #' @param fontsize Font size
@@ -21,7 +21,7 @@
 #' }
 #' @export
 str_extents <- function(x, fontname = "sans", fontsize = 12, bold = FALSE, italic = FALSE, fontfile = "") {
-    .Call('gdtools_str_extents', PACKAGE = 'gdtools', x, fontname, fontsize, bold, italic, fontfile)
+    .Call('_gdtools_str_extents', PACKAGE = 'gdtools', x, fontname, fontsize, bold, italic, fontfile)
 }
 
 #' Get font metrics for a string.
@@ -36,43 +36,66 @@ str_extents <- function(x, fontname = "sans", fontsize = 12, bold = FALSE, itali
 #' }
 #' @export
 str_metrics <- function(x, fontname = "sans", fontsize = 12, bold = FALSE, italic = FALSE, fontfile = "") {
-    .Call('gdtools_str_metrics', PACKAGE = 'gdtools', x, fontname, fontsize, bold, italic, fontfile)
+    .Call('_gdtools_str_metrics', PACKAGE = 'gdtools', x, fontname, fontsize, bold, italic, fontfile)
+}
+
+m_str_extents_ <- function(x, fontname, fontsize, bold, italic, fontfile) {
+    .Call('_gdtools_m_str_extents_', PACKAGE = 'gdtools', x, fontname, fontsize, bold, italic, fontfile)
+}
+
+#' Validate glyph entries
+#'
+#' Determines if strings contain glyphs not part of a font.
+#'
+#' @param x Character vector of strings
+#' @param bold,italic Is text bold/italic?
+#' @param fontname Font name
+#' @param fontfile Font file
+#' @return a logical vector, if a character element is containing at least
+#' a glyph that can not be matched in the font table, FALSE is returned.
+#'
+#' @examples
+#' glyphs_match(letters)
+#' glyphs_match("\u265E", bold = TRUE)
+#' @export
+glyphs_match <- function(x, fontname = "sans", bold = FALSE, italic = FALSE, fontfile = "") {
+    .Call('_gdtools_glyphs_match', PACKAGE = 'gdtools', x, fontname, bold, italic, fontfile)
 }
 
 context_create <- function() {
-    .Call('gdtools_context_create', PACKAGE = 'gdtools')
+    .Call('_gdtools_context_create', PACKAGE = 'gdtools')
 }
 
 context_set_font <- function(cc, fontname, fontsize, bold, italic, fontfile = "") {
-    .Call('gdtools_context_set_font', PACKAGE = 'gdtools', cc, fontname, fontsize, bold, italic, fontfile)
+    .Call('_gdtools_context_set_font', PACKAGE = 'gdtools', cc, fontname, fontsize, bold, italic, fontfile)
 }
 
 context_extents <- function(cc, x) {
-    .Call('gdtools_context_extents', PACKAGE = 'gdtools', cc, x)
+    .Call('_gdtools_context_extents', PACKAGE = 'gdtools', cc, x)
 }
 
 raster_to_str <- function(raster, w, h, width, height, interpolate) {
-    .Call('gdtools_raster_to_str', PACKAGE = 'gdtools', raster, w, h, width, height, interpolate)
+    .Call('_gdtools_raster_to_str', PACKAGE = 'gdtools', raster, w, h, width, height, interpolate)
 }
 
 raster_to_file <- function(raster, w, h, width, height, interpolate, filename) {
-    .Call('gdtools_raster_to_file', PACKAGE = 'gdtools', raster, w, h, width, height, interpolate, filename)
+    .Call('_gdtools_raster_to_file', PACKAGE = 'gdtools', raster, w, h, width, height, interpolate, filename)
 }
 
 raster_png_ <- function(raster_, w, h, width, height, interpolate, filename) {
-    .Call('gdtools_raster_png_', PACKAGE = 'gdtools', raster_, w, h, width, height, interpolate, filename)
+    .Call('_gdtools_raster_png_', PACKAGE = 'gdtools', raster_, w, h, width, height, interpolate, filename)
 }
 
 base64_raster_encode <- function(raster_, w, h, width, height, interpolate) {
-    .Call('gdtools_base64_raster_encode', PACKAGE = 'gdtools', raster_, w, h, width, height, interpolate)
+    .Call('_gdtools_base64_raster_encode', PACKAGE = 'gdtools', raster_, w, h, width, height, interpolate)
 }
 
 base64_file_encode <- function(filename) {
-    .Call('gdtools_base64_file_encode', PACKAGE = 'gdtools', filename)
+    .Call('_gdtools_base64_file_encode', PACKAGE = 'gdtools', filename)
 }
 
 base64_string_encode <- function(string) {
-    .Call('gdtools_base64_string_encode', PACKAGE = 'gdtools', string)
+    .Call('_gdtools_base64_string_encode', PACKAGE = 'gdtools', string)
 }
 
 #' @title List system fonts.
@@ -88,34 +111,34 @@ base64_string_encode <- function(string) {
 #' }
 #' @export
 sys_fonts <- function() {
-    .Call('gdtools_sys_fonts', PACKAGE = 'gdtools')
+    .Call('_gdtools_sys_fonts', PACKAGE = 'gdtools')
 }
 
 match_family_ <- function(font = "sans", bold = TRUE, italic = TRUE) {
-    .Call('gdtools_match_family_', PACKAGE = 'gdtools', font, bold, italic)
+    .Call('_gdtools_match_family_', PACKAGE = 'gdtools', font, bold, italic)
 }
 
 match_font_ <- function(font = "sans", bold = FALSE, italic = FALSE) {
-    .Call('gdtools_match_font_', PACKAGE = 'gdtools', font, bold, italic)
+    .Call('_gdtools_match_font_', PACKAGE = 'gdtools', font, bold, italic)
 }
 
 #' @rdname version_cairo
 #' @export
 version_freetype <- function() {
-    .Call('gdtools_version_freetype', PACKAGE = 'gdtools')
+    .Call('_gdtools_version_freetype', PACKAGE = 'gdtools')
 }
 
 #' @rdname version_cairo
 #' @export
 version_fontconfig <- function() {
-    .Call('gdtools_version_fontconfig', PACKAGE = 'gdtools')
+    .Call('_gdtools_version_fontconfig', PACKAGE = 'gdtools')
 }
 
 version_cairo_ <- function() {
-    .Call('gdtools_version_cairo_', PACKAGE = 'gdtools')
+    .Call('_gdtools_version_cairo_', PACKAGE = 'gdtools')
 }
 
 # Register entry points for exported C++ functions
 methods::setLoadAction(function(ns) {
-    .Call('gdtools_RcppExport_registerCCallable', PACKAGE = 'gdtools')
+    .Call('_gdtools_RcppExport_registerCCallable', PACKAGE = 'gdtools')
 })
