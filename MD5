@@ -1,4 +1,4 @@
-68b6faaffc18ad76f2452b0ce907bd1b *DESCRIPTION
+8bc74ebc29290a589163de626ba1eb6d *DESCRIPTION
 d32239bcb673463ab874e80d47fae504 *LICENSE
 51b3c7124831e5e142829ed9d8abea64 *NAMESPACE
 8ce1c5a82391c18f306c4854ec1e9840 *NEWS
@@ -15,7 +15,7 @@ d41d8cd98f00b204e9800998ecf8427e *configure.win
 de674c72d7d4669eaa6399ddddd882a6 *inst/fontconfig/dummy-fonts.conf
 aec4505d66f5583e59fcb80eb0fc20f8 *inst/fontconfig/fonts.conf
 1dd40cfbddcb72173c6d8c2f6b3c8df9 *inst/include/gdtools.h
-f4ffa588ce8d04f3c7be2a7548aba73f *inst/include/gdtools_RcppExports.h
+62279a8e901cd58990cdd6966197a507 *inst/include/gdtools_RcppExports.h
 d41d8cd98f00b204e9800998ecf8427e *inst/include/gdtools_types.cpp
 2dca6b353cb2cd15593657282218b299 *inst/include/gdtools_types.h
 5b012fb457e03e6c30c46439d167259f *man/font_family_exists.Rd
@@ -44,4 +44,4 @@ d8252437453801ecb341846f83005a7f *tests/testthat.R
 2f541f9d74d8ef19bcda19a7ab42729d *tests/testthat/test-raster.R
 df90cd2644166b7e6efde5b4c377f5fc *tests/testthat/test-str_extents.R
 363712ab46912f592279feed64afc32e *tests/testthat/test-str_metrics.R
-5b31a6ec5afaebbc07710347052f3173 *tools/winlibs.R
+06d778ba079a1f3f118177b0a3607f0e *tools/winlibs.R
