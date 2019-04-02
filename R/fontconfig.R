@@ -135,3 +135,12 @@ unset_dummy_conf <- function() {
   Sys.unsetenv("FONTCONFIG_FILE")
   reload_dll()
 }
+
+#' @export
+#' @title reload Fontconfig configuration
+#' @description This function can be used to make fontconfig
+#' reload font configuration files.
+#' @author Paul Murrell
+fontconfig_reinit <- function() {
+  reinit_()
+}

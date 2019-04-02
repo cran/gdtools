@@ -92,6 +92,10 @@ RcppExport SEXP _gdtools_context_create() {
         UNPROTECT(1);
         Rf_onintr();
     }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
+    }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
         SEXP rcpp_msgSEXP_gen = Rf_asChar(rcpp_result_gen);
@@ -127,6 +131,10 @@ RcppExport SEXP _gdtools_context_set_font(SEXP ccSEXP, SEXP fontnameSEXP, SEXP f
         UNPROTECT(1);
         Rf_onintr();
     }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
+    }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
         SEXP rcpp_msgSEXP_gen = Rf_asChar(rcpp_result_gen);
@@ -157,6 +165,10 @@ RcppExport SEXP _gdtools_context_extents(SEXP ccSEXP, SEXP xSEXP) {
     if (rcpp_isInterrupt_gen) {
         UNPROTECT(1);
         Rf_onintr();
+    }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
     }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
@@ -192,6 +204,10 @@ RcppExport SEXP _gdtools_raster_to_str(SEXP rasterSEXP, SEXP wSEXP, SEXP hSEXP, 
     if (rcpp_isInterrupt_gen) {
         UNPROTECT(1);
         Rf_onintr();
+    }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
     }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
@@ -229,6 +245,10 @@ RcppExport SEXP _gdtools_raster_to_file(SEXP rasterSEXP, SEXP wSEXP, SEXP hSEXP,
         UNPROTECT(1);
         Rf_onintr();
     }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
+    }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
         SEXP rcpp_msgSEXP_gen = Rf_asChar(rcpp_result_gen);
@@ -265,6 +285,10 @@ RcppExport SEXP _gdtools_raster_png_(SEXP raster_SEXP, SEXP wSEXP, SEXP hSEXP, S
         UNPROTECT(1);
         Rf_onintr();
     }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
+    }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
         SEXP rcpp_msgSEXP_gen = Rf_asChar(rcpp_result_gen);
@@ -300,6 +324,10 @@ RcppExport SEXP _gdtools_base64_raster_encode(SEXP raster_SEXP, SEXP wSEXP, SEXP
         UNPROTECT(1);
         Rf_onintr();
     }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
+    }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
         SEXP rcpp_msgSEXP_gen = Rf_asChar(rcpp_result_gen);
@@ -330,6 +358,10 @@ RcppExport SEXP _gdtools_base64_file_encode(SEXP filenameSEXP) {
         UNPROTECT(1);
         Rf_onintr();
     }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
+    }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
         SEXP rcpp_msgSEXP_gen = Rf_asChar(rcpp_result_gen);
@@ -359,6 +391,10 @@ RcppExport SEXP _gdtools_base64_string_encode(SEXP stringSEXP) {
     if (rcpp_isInterrupt_gen) {
         UNPROTECT(1);
         Rf_onintr();
+    }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
     }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
@@ -402,6 +438,16 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< bool >::type bold(boldSEXP);
     Rcpp::traits::input_parameter< bool >::type italic(italicSEXP);
     rcpp_result_gen = Rcpp::wrap(match_font_(font, bold, italic));
+    return rcpp_result_gen;
+END_RCPP
+}
+// reinit_
+Rcpp::LogicalVector reinit_();
+RcppExport SEXP _gdtools_reinit_() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(reinit_());
     return rcpp_result_gen;
 END_RCPP
 }
@@ -485,6 +531,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_gdtools_sys_fonts", (DL_FUNC) &_gdtools_sys_fonts, 0},
     {"_gdtools_match_family_", (DL_FUNC) &_gdtools_match_family_, 3},
     {"_gdtools_match_font_", (DL_FUNC) &_gdtools_match_font_, 3},
+    {"_gdtools_reinit_", (DL_FUNC) &_gdtools_reinit_, 0},
     {"_gdtools_version_freetype", (DL_FUNC) &_gdtools_version_freetype, 0},
     {"_gdtools_version_fontconfig", (DL_FUNC) &_gdtools_version_fontconfig, 0},
     {"_gdtools_version_cairo_", (DL_FUNC) &_gdtools_version_cairo_, 0},
