@@ -1,10 +1,10 @@
-9c6a77abe55a71dff7985b9bb00d684a *DESCRIPTION
+673e0ab387c8b5467aa1b265575b724f *DESCRIPTION
 d32239bcb673463ab874e80d47fae504 *LICENSE
 17e091526c7c7ee58963c25f0a96d132 *NAMESPACE
-cb435f57aba95f5e1a93826f52be88a9 *NEWS
+4d8a45bc7dbac0dd1a2e01c9fdebed17 *NEWS
 f0b63e0e1999064c425ca8e457c0db15 *R/RcppExports.R
 0dad7da6bd5af9c60d02ae54d2b8b52c *R/cpp-proxies.R
-e1d4d263419b95bf175eae3f9dab70e7 *R/font_family_exists.R
+d935e76475f802bdcd4212f86f29ab0c *R/font_family_exists.R
 51211b7bfa3b3b670272e74a628f3b8f *R/fontconfig.R
 44b848e6ac68b95511b7c6f6821b3680 *R/gdtools.R
 7b4828e8bffaa4d4e587f9a3cab7b83a *R/m_str_extents.R
@@ -28,7 +28,7 @@ abcd2f133af97f0bdccdc09525fbbb1e *man/glyphs_match.Rd
 cd0b29fd9ee08c78d77b9037d294c0c1 *man/str_metrics.Rd
 0dd12297ab29ee5742cb81dfb646a744 *man/sys_fonts.Rd
 06afbcca1d0a00c5635944cceb0f3a8e *man/version_cairo.Rd
-beca0c78b68716b0dead5ffe41003c27 *src/CairoContext.cpp
+1406cbb642867f1cec46d30ce148c67d *src/CairoContext.cpp
 131e8f2086512f6bd15d7a46fd2998f4 *src/Makevars.in
 0446a66cbf6deba3b0b84692ac81aa0d *src/Makevars.win
 d5d7b20b8035340718459dd75dd35b86 *src/RcppExports.cpp
