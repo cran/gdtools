@@ -1,7 +1,7 @@
-673e0ab387c8b5467aa1b265575b724f *DESCRIPTION
+69098e2fff01c0f02256b6789165e8c1 *DESCRIPTION
 d32239bcb673463ab874e80d47fae504 *LICENSE
 17e091526c7c7ee58963c25f0a96d132 *NAMESPACE
-4d8a45bc7dbac0dd1a2e01c9fdebed17 *NEWS
+8df81d9e39288c950dba0cda54ee3dda *NEWS
 f0b63e0e1999064c425ca8e457c0db15 *R/RcppExports.R
 0dad7da6bd5af9c60d02ae54d2b8b52c *R/cpp-proxies.R
 d935e76475f802bdcd4212f86f29ab0c *R/font_family_exists.R
@@ -9,8 +9,8 @@ d935e76475f802bdcd4212f86f29ab0c *R/font_family_exists.R
 44b848e6ac68b95511b7c6f6821b3680 *R/gdtools.R
 7b4828e8bffaa4d4e587f9a3cab7b83a *R/m_str_extents.R
 94780024b9e98d4c01a56e06e239f668 *R/raster.R
-6071edd604dbeb75308cfbedc7790398 *cleanup
-af20d2f08460bd22444ee588f9b25e22 *configure
+bc7baead3b6080f04dc81efd2fe1ff39 *cleanup
+42d7a2058c8dc10500fb6bdebb3d9e6b *configure
 d41d8cd98f00b204e9800998ecf8427e *configure.win
 1dd40cfbddcb72173c6d8c2f6b3c8df9 *inst/include/gdtools.h
 02ccd021b0ef8f143602d8585ca29ee2 *inst/include/gdtools_RcppExports.h
@@ -35,6 +35,7 @@ d5d7b20b8035340718459dd75dd35b86 *src/RcppExports.cpp
 2053aadb4276b4066e13af220812b9b8 *src/font_metrics.cpp
 bc6a9479fe9002fc251f3bbca282c303 *src/gdtools.cpp
 d15f803daf529add0e3c695271bbede3 *src/raster_to_base64.cpp
+e88be22bd4f02671ef54bf42f42065b8 *src/tests/sysdeps.c
 8dabb51a7c1a30785bf722556222a85f *src/versions.cpp
 d8252437453801ecb341846f83005a7f *tests/testthat.R
 3f1839b260441de56baeb401d2b22b7b *tests/testthat/helper-fontconfig.R
