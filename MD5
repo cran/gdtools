@@ -1,7 +1,7 @@
-b351226c91d752d831983e5d1b208668 *DESCRIPTION
+c6dbcb3ec8b60268387fea836f1b0b22 *DESCRIPTION
 d32239bcb673463ab874e80d47fae504 *LICENSE
 17e091526c7c7ee58963c25f0a96d132 *NAMESPACE
-ecef078d3113aa465dd0d2702c21fb2b *NEWS
+5bb5f9c91114da0b8faffd0705983f96 *NEWS
 f0b63e0e1999064c425ca8e457c0db15 *R/RcppExports.R
 0dad7da6bd5af9c60d02ae54d2b8b52c *R/cpp-proxies.R
 d935e76475f802bdcd4212f86f29ab0c *R/font_family_exists.R
@@ -31,8 +31,9 @@ f9e97eefcc3b288f1d9f0ef5f97f4155 *man/str_metrics.Rd
 06afbcca1d0a00c5635944cceb0f3a8e *man/version_cairo.Rd
 1406cbb642867f1cec46d30ce148c67d *src/CairoContext.cpp
 131e8f2086512f6bd15d7a46fd2998f4 *src/Makevars.in
-0446a66cbf6deba3b0b84692ac81aa0d *src/Makevars.win
-d5d7b20b8035340718459dd75dd35b86 *src/RcppExports.cpp
+2cec33791efd347cbcb051402d7cf9c4 *src/Makevars.ucrt
+5600c2d7c88bb8a0d6e6aa262ba3a7e1 *src/Makevars.win
+dd0998651a1a355a6c28f30c51df870f *src/RcppExports.cpp
 2053aadb4276b4066e13af220812b9b8 *src/font_metrics.cpp
 bc6a9479fe9002fc251f3bbca282c303 *src/gdtools.cpp
 d15f803daf529add0e3c695271bbede3 *src/raster_to_base64.cpp
