@@ -1,5 +1,5 @@
 Package: gdtools
-Version: 0.3.2
+Version: 0.3.3
 License: GPL-3 | file LICENSE
 Title: Utilities for Graphical Rendering and Fonts Management
 Description: Tools are provided to compute metrics of 
@@ -21,9 +21,9 @@ Authors@R: c(
     person("RStudio", role = "cph")
   )
 Depends: R (>= 4.0.0)
-Imports: Rcpp (>= 0.12.12), systemfonts (>= 0.1.1), htmltools, memoise,
-        gfonts, tools, curl, fontquiver (>= 0.2.0)
-Suggests: testthat
+Imports: Rcpp (>= 0.12.12), systemfonts (>= 0.1.1), htmltools, gfonts,
+        tools, curl, fontquiver (>= 0.2.0)
+Suggests: testthat, methods
 Encoding: UTF-8
 LinkingTo: Rcpp
 SystemRequirements: cairo, freetype2, fontconfig
@@ -31,7 +31,7 @@ URL: https://davidgohel.github.io/gdtools/
 BugReports: https://github.com/davidgohel/gdtools/issues
 RoxygenNote: 7.2.3
 NeedsCompilation: yes
-Packaged: 2023-03-13 10:08:31 UTC; davidgohel
+Packaged: 2023-03-27 13:29:18 UTC; davidgohel
 Author: David Gohel [aut, cre],
   Hadley Wickham [aut],
   Lionel Henry [aut],
@@ -42,4 +42,4 @@ Author: David Gohel [aut, cre],
   RStudio [cph]
 Maintainer: David Gohel <david.gohel@ardata.fr>
 Repository: CRAN
-Date/Publication: 2023-03-13 11:00:02 UTC
+Date/Publication: 2023-03-27 13:50:02 UTC
