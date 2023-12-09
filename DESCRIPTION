@@ -1,5 +1,5 @@
 Package: gdtools
-Version: 0.3.4
+Version: 0.3.5
 License: GPL-3 | file LICENSE
 Title: Utilities for Graphical Rendering and Fonts Management
 Description: Tools are provided to compute metrics of 
@@ -31,7 +31,7 @@ URL: https://davidgohel.github.io/gdtools/
 BugReports: https://github.com/davidgohel/gdtools/issues
 RoxygenNote: 7.2.3
 NeedsCompilation: yes
-Packaged: 2023-10-15 12:24:34 UTC; david
+Packaged: 2023-12-09 16:11:29 UTC; davidgohel
 Author: David Gohel [aut, cre],
   Hadley Wickham [aut],
   Lionel Henry [aut],
@@ -42,4 +42,4 @@ Author: David Gohel [aut, cre],
   RStudio [cph]
 Maintainer: David Gohel <david.gohel@ardata.fr>
 Repository: CRAN
-Date/Publication: 2023-10-15 13:02:34 UTC
+Date/Publication: 2023-12-09 17:00:09 UTC
