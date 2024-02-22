@@ -1,4 +1,4 @@
-48f9678759e45564f2bea309d314eb48 *DESCRIPTION
+baf7ab1007594871d56c79caa11586c2 *DESCRIPTION
 d32239bcb673463ab874e80d47fae504 *LICENSE
 c38db40a78337646730b7101893f9f0d *NAMESPACE
 7a47fb03ede4fc8c2e8ffcf8308d9d6f *NEWS
@@ -6,11 +6,11 @@ f0b63e0e1999064c425ca8e457c0db15 *R/RcppExports.R
 40d4d4cb575fb48161348d633a879fc6 *R/font-caching.R
 a137011a584b13f634d535089060e9fc *R/font_family_exists.R
 5aed04ca16b25f7db8c45812d6919c96 *R/fontconfig.R
-9f225cb11617571d0c65b900bc0c9dc1 *R/fonts.R
+330a49081ae1592c15ddcbf13d12f27a *R/fonts.R
 44b848e6ac68b95511b7c6f6821b3680 *R/gdtools.R
 94780024b9e98d4c01a56e06e239f668 *R/raster.R
 4f1bcc24bacae82428ddb12020a7a722 *R/str-metrics.R
-d7f3c57db50902de8735c487baaa18d9 *R/sysdata.rda
+bc96bba1307812c6aa7f405bb0bfccbe *R/sysdata.rda
 e9153cb1d2ca36fb59e0d492d0736c47 *README.md
 bc7baead3b6080f04dc81efd2fe1ff39 *cleanup
 fa71cebc4b7a5f9c9daed0a8ad2033c3 *configure
