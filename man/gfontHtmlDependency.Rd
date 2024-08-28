@@ -26,7 +26,7 @@ Run the following code to get a complete list:
 }\if{html}{\out{</div>}}}
 }
 \value{
-an object defined with \code{\link[=htmlDependency]{htmlDependency()}}.
+an object defined with \code{\link[htmltools:htmlDependency]{htmltools::htmlDependency()}}.
 }
 \description{
 Create an HTML dependency ready
@@ -46,7 +46,7 @@ must be a number of seconds.
 }
 \examples{
 \dontrun{
-if (curl::has_internet()) {
+if (check_gfonts()) {
   dummy_setup()
   gfontHtmlDependency(family = "Open Sans")
 }
