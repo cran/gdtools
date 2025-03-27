@@ -1,6 +1,6 @@
 Package: gdtools
 Title: Utilities for Graphical Rendering and Fonts Management
-Version: 0.4.1
+Version: 0.4.2
 Authors@R: c(
     person("David", "Gohel", , "david.gohel@ardata.fr", role = c("aut", "cre")),
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = "aut"),
@@ -32,7 +32,7 @@ Encoding: UTF-8
 RoxygenNote: 7.3.2
 SystemRequirements: cairo, freetype2, fontconfig
 NeedsCompilation: yes
-Packaged: 2024-11-04 08:32:53 UTC; davidgohel
+Packaged: 2025-03-21 15:59:32 UTC; davidgohel
 Author: David Gohel [aut, cre],
   Hadley Wickham [aut],
   Lionel Henry [aut],
@@ -43,4 +43,4 @@ Author: David Gohel [aut, cre],
   RStudio [cph]
 Maintainer: David Gohel <david.gohel@ardata.fr>
 Repository: CRAN
-Date/Publication: 2024-11-04 09:30:02 UTC
+Date/Publication: 2025-03-27 06:30:02 UTC

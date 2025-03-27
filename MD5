@@ -1,7 +1,7 @@
-c5d6191dcf7405ab19e3f25fe1824135 *DESCRIPTION
+51827f3b13513426bd1f863c2cb770de *DESCRIPTION
 d32239bcb673463ab874e80d47fae504 *LICENSE
 771f1a9b29fe0de6b491a145f797b6dd *NAMESPACE
-f8b1686886304d58feb4c15001395435 *NEWS.md
+053ff6b83f1602e0e4afcb7d88367e7f *NEWS.md
 f0b63e0e1999064c425ca8e457c0db15 *R/RcppExports.R
 c2d525dcbc829bcf3f9a921557a92c2b *R/font-caching.R
 04ba65529ada0c9d17ad549fe7b6706f *R/font_family_exists.R
@@ -12,7 +12,7 @@ e08fa22eadf9188e86d8906d687ec2f1 *R/liberation-sans.R
 94780024b9e98d4c01a56e06e239f668 *R/raster.R
 4f1bcc24bacae82428ddb12020a7a722 *R/str-metrics.R
 a9a515e25509bbd0e70365962d69ed39 *R/sysdata.rda
-e9153cb1d2ca36fb59e0d492d0736c47 *README.md
+09f99f1f3228f1fd3b7c6a66f4919160 *README.md
 bc7baead3b6080f04dc81efd2fe1ff39 *cleanup
 fa71cebc4b7a5f9c9daed0a8ad2033c3 *configure
 d41d8cd98f00b204e9800998ecf8427e *configure.win
@@ -44,8 +44,8 @@ c68e9c707af2d9c8b2c526e181ca5075 *man/str_extents.Rd
 75c1a6c8471d9a8ad578c071775f2d02 *man/sys_fonts.Rd
 06afbcca1d0a00c5635944cceb0f3a8e *man/version_cairo.Rd
 1406cbb642867f1cec46d30ce148c67d *src/CairoContext.cpp
-131e8f2086512f6bd15d7a46fd2998f4 *src/Makevars.in
-51ff70aba2efc97d6d291061f2d8d8cc *src/Makevars.win
+4efe0e6d984a8a7997693e3fb5cb0b65 *src/Makevars.in
+7e21fc153023ed66b540d2505b9f392e *src/Makevars.win
 ad490335dc913639f2b1f1edf882a20e *src/RcppExports.cpp
 2053aadb4276b4066e13af220812b9b8 *src/font_metrics.cpp
 bc6a9479fe9002fc251f3bbca282c303 *src/gdtools.cpp
